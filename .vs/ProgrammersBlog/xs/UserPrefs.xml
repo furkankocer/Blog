@@ -1,22 +1,35 @@
 ﻿<Properties StartupConfiguration="{22E71937-AE48-42CB-84B7-667BCF82FE0E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProgrammersBlog.Shared/Data/Abstract/IEntitiyRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProgrammersBlog.Data/Abstract/IRoleRepository.cs">
     <Files>
-      <File FileName="ProgrammersBlog.Shared/Data/Concrete/EntityFramework/EfEntityRepositoryBase.cs" Line="11" Column="64" />
-      <File FileName="ProgrammersBlog.Shared/Data/Abstract/IEntitiyRepository.cs" Line="24" Column="65" />
+      <File FileName="ProgrammersBlog.Shared/Data/Concrete/EntityFramework/EfEntityRepositoryBase.cs" Line="29" Column="58" />
+      <File FileName="ProgrammersBlog.Shared/Data/Abstract/IEntitiyRepository.cs" Line="9" Column="22" />
+      <File FileName="ProgrammersBlog.Data/Abstract/IArticleRepository.cs" Line="7" Column="71" />
+      <File FileName="ProgrammersBlog.Data/Abstract/ICategoryRepository.cs" Line="7" Column="64" />
+      <File FileName="ProgrammersBlog.Data/Abstract/ICommentRepository.cs" Line="7" Column="69" />
+      <File FileName="ProgrammersBlog.Data/Abstract/IUserRepository.cs" Line="9" Column="6" />
+      <File FileName="ProgrammersBlog.Entities/Concrete/User.cs" Line="7" Column="33" />
+      <File FileName="ProgrammersBlog.Entities/Concrete/Role.cs" Line="7" Column="25" />
+      <File FileName="ProgrammersBlog.Entities/Concrete/Comment.cs" Line="1" Column="1" />
+      <File FileName="ProgrammersBlog.Entities/Concrete/Category.cs" Line="1" Column="1" />
+      <File FileName="ProgrammersBlog.Entities/Concrete/Article.cs" Line="1" Column="1" />
+      <File FileName="ProgrammersBlog.Data/Abstract/IRoleRepository.cs" Line="4" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowVersionControlOverlays" value="False" />
           <Node name="ProgrammersBlog" expanded="True">
+            <Node name="ProgrammersBlog.Data" expanded="True">
+              <Node name="Abstract" expanded="True">
+                <Node name="IRoleRepository.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="ProgrammersBlog.Entities" expanded="True">
+              <Node name="Concrete" expanded="True" />
+            </Node>
             <Node name="ProgrammersBlog.Shared" expanded="True">
               <Node name="Data" expanded="True">
-                <Node name="Abstract" expanded="True">
-                  <Node name="IEntitiyRepository.cs" selected="True" />
-                </Node>
-                <Node name="Concrete" expanded="True">
-                  <Node name="EntityFramework" expanded="True" />
-                </Node>
+                <Node name="Abstract" expanded="True" />
               </Node>
             </Node>
           </Node>
