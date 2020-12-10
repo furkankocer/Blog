@@ -4,4 +4,11 @@
         <TargetFramework>net48</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Abstract\" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\ProgrammersBlog.Entities\ProgrammersBlog.Entities.csproj" />
+      <ProjectReference Include="..\ProgrammersBlog.Shared\ProgrammersBlog.Shared.csproj" />
+    </ItemGroup>
 </Project>
