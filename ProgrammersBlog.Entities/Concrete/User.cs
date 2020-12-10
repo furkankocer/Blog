@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using ProgrammersBlog.Shared.Entities.Abstract;
 
 namespace ProgrammersBlog.Entities.Concrete
 {
-    public class User
+    public class User : EntityBase, IEntity
     {
         public string FirstName { get; set; }
 
