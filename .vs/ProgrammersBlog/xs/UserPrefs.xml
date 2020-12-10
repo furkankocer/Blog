@@ -1,24 +1,19 @@
-﻿<Properties StartupConfiguration="{F8983837-D61A-4027-9F34-FE08E1388789}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProgrammersBlog.Entities/Concrete/Comment.cs">
-    <Files>
-      <File FileName="ProgrammersBlog.Shared/Entities/Abstract/EntityBase.cs" Line="4" Column="4" />
-      <File FileName="ProgrammersBlog.Shared/Entities/Abstract/IEntity.cs" Line="6" Column="1" />
-      <File FileName="ProgrammersBlog.Entities/Concrete/Category.cs" Line="16" Column="1" />
-      <File FileName="ProgrammersBlog.Entities/Concrete/Article.cs" Line="29" Column="1" />
-      <File FileName="ProgrammersBlog.Entities/Concrete/Role.cs" Line="15" Column="2" />
-      <File FileName="ProgrammersBlog.Entities/Concrete/User.cs" Line="18" Column="39" />
-      <File FileName="ProgrammersBlog.Entities/Concrete/Commen.cs" Line="1" Column="1" />
-    </Files>
+﻿<Properties StartupConfiguration="{22E71937-AE48-42CB-84B7-667BCF82FE0E}|Default">
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowVersionControlOverlays" value="False" />
           <Node name="ProgrammersBlog" expanded="True">
-            <Node name="ProgrammersBlog.Entities" expanded="True">
-              <Node name="Concrete" expanded="True">
-                <Node name="Comment.cs" selected="True" />
+            <Node name="ProgrammersBlog.Shared" expanded="True">
+              <Node name="Data" expanded="True">
+                <Node name="Abstract" expanded="True" />
+              </Node>
+              <Node name="Entities" expanded="True">
+                <Node name="Abstract" expanded="True" />
               </Node>
             </Node>
+            <Node name="Test" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
