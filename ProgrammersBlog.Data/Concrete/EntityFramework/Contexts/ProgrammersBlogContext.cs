@@ -18,7 +18,7 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("");
+            optionsBuilder.UseNpgsql("User ID=postgres;Password=145366;Server=localhost;Port=5432;Database=postgres;Integrated Security=true;Pooling=true;");
         }
     }
 }
