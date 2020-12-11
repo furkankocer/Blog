@@ -9,7 +9,7 @@ using ProgrammersBlog.Shared.Entities.Abstract;
 
 namespace ProgrammersBlog.Shared.Data.Concrete.EntityFramework
 {
-    public class gEfEntityRepositoryBase<TEntity> : IEntitiyRepository<TEntity>
+    public class EfEntityRepositoryBase<TEntity> : IEntitiyRepository<TEntity>
         where TEntity : class, IEntity, new()
     {
         private readonly DbContext _context;
