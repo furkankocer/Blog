@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ProgrammersBlog.Entities.Concrete;
@@ -24,6 +25,46 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(x => x.Note).HasMaxLength(500);
 
             builder.ToTable("Categories");
+            
+            builder.HasData(new Category
+            {
+                Id = 1,
+                Name = "C#",
+                Description = "C# İLE İLGİLİ GÜNCEL BİLGİLER",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "C# KATEGORİSİ",
+            },
+                new  Category
+            {
+                Id = 2,
+                Name = "C++",
+                Description = "C++ İLE İLGİLİ GÜNCEL BİLGİLER",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "C++ KATEGORİSİ",
+            },
+                new  Category
+                {
+                    Id = 3,
+                    Name = "JAVA",
+                    Description = "JAVA İLE İLGİLİ GÜNCEL BİLGİLER",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "JAVA KATEGORİSİ",
+                });
         }
     }
 }

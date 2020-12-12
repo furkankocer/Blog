@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ProgrammersBlog.Entities.Concrete;
@@ -43,6 +44,76 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
                 .HasForeignKey(x=>x.UserId);
 
             builder.ToTable("Articles");
+
+            builder.HasData(new Article
+            {
+                Id = 1,
+                CategoryId = 1,
+                Title = "C# 9 YENİLİKLERİ",
+                Content =
+                    $"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                Thumbnail = "Default.jpg",
+                SeoDescription = "C# 9 YENİLİKLERİ",
+                SeoTags = "c#,9,.net core",
+                SeoAuthor = "Furkan Koçer",
+                Date = DateTime.Now,
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "C# 9 YENİLİKLERİ",
+                UserId = 1,
+                ViewsCount = 12,
+                CommentCount = 1
+
+            }, new Article
+            {
+                Id = 2,
+                CategoryId = 2,
+                Title = "C++ 9 YENİLİKLERİ",
+                Content =
+                    $"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                Thumbnail = "Default.jpg",
+                SeoDescription = "C++ 9 YENİLİKLERİ",
+                SeoTags = "C++,9,.net core",
+                SeoAuthor = "Furkan Koçer",
+                Date = DateTime.Now,
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "C++ 9 YENİLİKLERİ",
+                UserId = 1,
+                ViewsCount = 12,
+                CommentCount = 1
+            },
+            new Article
+            {
+                Id = 3,
+                CategoryId = 3,
+                Title = "JAVA  YENİLİKLERİ",
+                Content =
+                    $"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                Thumbnail = "Default.jpg",
+                SeoDescription = "JAVA 9 YENİLİKLERİ",
+                SeoTags = "JAVA,",
+                SeoAuthor = "Furkan Koçer",
+                Date = DateTime.Now,
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "JAVA  YENİLİKLERİ",
+                UserId = 1,
+                ViewsCount = 12,
+                CommentCount = 1
+            });
         }
     }
 }

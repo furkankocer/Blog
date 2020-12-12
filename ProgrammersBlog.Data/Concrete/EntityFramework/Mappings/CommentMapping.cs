@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ProgrammersBlog.Entities.Concrete;
@@ -27,6 +28,22 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
                 .HasForeignKey(c => c.ArticleId);
 
             builder.ToTable("Comments");
+            
+            builder.HasData(new Comment
+            {
+                Id=1,
+                ArticleId = 1,
+                Text = "Hello",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "Firs Comment"
+                
+                
+            })
         }
     }
 }

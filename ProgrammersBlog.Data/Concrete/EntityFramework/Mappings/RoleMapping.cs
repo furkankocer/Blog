@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ProgrammersBlog.Entities.Concrete;
@@ -25,6 +26,20 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(x => x.Note).HasMaxLength(500);
 
             builder.ToTable("Roles");
+
+            builder.HasData(new Role
+            {
+                Id = 1,
+                Name = "Admin",
+                Description = "Admin Rolü, Tüm Haklara Sahiptir.",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Note = "Admin Rolüdür"
+            });
         }
     }
 }
