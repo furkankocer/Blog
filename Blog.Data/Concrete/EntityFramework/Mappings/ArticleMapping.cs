@@ -14,7 +14,7 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(x => x.Title).HasMaxLength(100);
             builder.Property(x => x.Title).IsRequired();
             builder.Property(x => x.Content).IsRequired();
-            builder.Property(x => x.Content).HasColumnType("NVARCHAR (MAX)");
+            
             builder.Property((x => x.Date)).IsRequired();
             builder.Property(x => x.SeoAuthor).IsRequired();
             builder.Property(x => x.SeoAuthor).HasMaxLength(50);

@@ -1,16 +1,37 @@
-﻿<Properties StartupConfiguration="{2DC95281-0226-4C48-A61E-17643357C8E2}|Default">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{50C0ACC2-E143-43B4-99F5-79170D712724}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Blog.Data/Concrete/EntityFramework/Mappings/UserMapping.cs">
+    <Files>
+      <File FileName="Blog.Data/Concrete/EntityFramework/Mappings/ArticleMapping.cs" Line="1" Column="1" />
+      <File FileName="Blog.Data/Concrete/EntityFramework/Mappings/CategoryMapping.cs" Line="1" Column="1" />
+      <File FileName="Blog.Data/Concrete/EntityFramework/Mappings/CommentMapping.cs" Line="1" Column="1" />
+      <File FileName="Blog.Data/Concrete/EntityFramework/Mappings/RoleMapping.cs" Line="1" Column="1" />
+      <File FileName="Blog.Data/Concrete/EntityFramework/Mappings/UserMapping.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowVersionControlOverlays" value="False" />
-          <Node name="ProgrammersBlog" expanded="True" selected="True" />
+          <Node name="ProgrammersBlog" expanded="True">
+            <Node name="Blog.Data" expanded="True">
+              <Node name="Abstract" expanded="True" />
+              <Node name="Concrete" expanded="True">
+                <Node name="EntityFramework" expanded="True">
+                  <Node name="Mappings" expanded="True">
+                    <Node name="UserMapping.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Blog.Entities" expanded="True">
+              <Node name="Concrete" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ProgrammersBlog.Mvc PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Blog.Mvc PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

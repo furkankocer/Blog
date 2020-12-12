@@ -20,7 +20,6 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(x=>x.Username).HasMaxLength(20);
             builder.HasIndex(x=>x.Username).IsUnique();
             builder.Property(x => x.PasswordHash).IsRequired();
-            builder.Property(x => x.PasswordHash).HasColumnType("VARBINARY(500)");
             builder.Property(x => x.Description).HasMaxLength(500);
             builder.Property(x => x.FirstName).IsRequired();
             builder.Property(x => x.FirstName).HasMaxLength(30);

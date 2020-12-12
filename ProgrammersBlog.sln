@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgrammersBlog.Mvc", "ProgrammersBlog.Mvc\ProgrammersBlog.Mvc.csproj", "{2DC95281-0226-4C48-A61E-17643357C8E2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Data", "Blog.Data\Blog.Data.csproj", "{C91E090E-BBEE-47D3-8024-B1CB8DC4D607}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Entities", "Blog.Entities\Blog.Entities.csproj", "{952A424A-1AA8-4908-9825-914178B20212}"
@@ -21,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2DC95281-0226-4C48-A61E-17643357C8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DC95281-0226-4C48-A61E-17643357C8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DC95281-0226-4C48-A61E-17643357C8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DC95281-0226-4C48-A61E-17643357C8E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C91E090E-BBEE-47D3-8024-B1CB8DC4D607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C91E090E-BBEE-47D3-8024-B1CB8DC4D607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C91E090E-BBEE-47D3-8024-B1CB8DC4D607}.Release|Any CPU.ActiveCfg = Release|Any CPU
