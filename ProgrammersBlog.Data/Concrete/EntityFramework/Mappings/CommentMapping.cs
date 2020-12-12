@@ -28,10 +28,10 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
                 .HasForeignKey(c => c.ArticleId);
 
             builder.ToTable("Comments");
-            
+
             builder.HasData(new Comment
             {
-                Id=1,
+                Id = 1,
                 ArticleId = 1,
                 Text = "Hello",
                 IsActive = true,
@@ -41,9 +41,7 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
                 ModifiedByName = "InitialCreate",
                 ModifiedDate = DateTime.Now,
                 Note = "Firs Comment"
-                
-                
-            })
+            });
         }
     }
 }
