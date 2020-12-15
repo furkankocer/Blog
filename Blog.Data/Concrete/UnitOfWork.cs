@@ -7,6 +7,7 @@ namespace ProgrammersBlog.Data.Concrete
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ProgrammersBlogContext _context;
+        
         private EfArticleRepository _articleRepository;
         private EfCategoryRepository _categoryRepository;
         private EfCommentRepository _commentRepository;
@@ -24,6 +25,7 @@ namespace ProgrammersBlog.Data.Concrete
         public IRoleRepository Roles => _roleRepository ?? new EfRoleRepository(_context);
         public IUserRepository Users => _userRepository ?? new EfUserRepository(_context);
         
+        // Generic Repository içerisine yazılabilir.
         public async Task<int> SaveAsync()
         {
             return await _context.SaveChangesAsync();
