@@ -14,7 +14,7 @@ namespace Blog.Services.Abstract
         Task<IDataResult<IList<Category>>> GetAllByNonDeleted();
         Task<IResult> Add(CategoryAddDto categoryAddDto, string createdByName);
         Task<IResult> Update(CategoryUpdateDto categoryUpdateDto, string modifiedByName);
-        Task<IResult> Delete(int categoryId); // IsActive false olur.
+        Task<IResult> Delete(int categoryId, string modifiedByName); // IsActive false olur.
         Task<IResult> HardDelete(int categoryId); //Veri tabanından silinir.
     }
 }
