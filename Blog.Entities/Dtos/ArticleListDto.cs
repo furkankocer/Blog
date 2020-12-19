@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using Blog.Entities.Concrete;
+using Blog.Shared.Entities.Abstract;
 using Blog.Shared.Utilities.Results.ComplexTypes;
-using ProgrammersBlog.Entities.Concrete;
 
 namespace Blog.Entities.Dtos
 {
-    public class ArticleListDto
+    public class ArticleListDto : DtoGetBase
     {
         public IList<Article> Articles { get; set; }
     }

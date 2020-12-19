@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Blog.Entities.Concrete;
 using Blog.Entities.Dtos;
 using Blog.Services.Abstract;
 using Blog.Shared.Utilities.Results.Abstract;
 using Blog.Shared.Utilities.Results.ComplexTypes;
 using Blog.Shared.Utilities.Results.Concrete;
 using ProgrammersBlog.Data.Abstract;
-using ProgrammersBlog.Entities.Concrete;
 
 namespace Blog.Services.Concrete
 {

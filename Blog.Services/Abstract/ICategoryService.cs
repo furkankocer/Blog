@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Blog.Entities.Concrete;
 using Blog.Entities.Dtos;
 using Blog.Shared.Utilities.Results.Abstract;
-using ProgrammersBlog.Entities.Concrete;
 
 namespace Blog.Services.Abstract
 {

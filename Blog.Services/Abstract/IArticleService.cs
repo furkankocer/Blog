@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Blog.Entities.Dtos;
 using Blog.Shared.Utilities.Results.Abstract;
-using ProgrammersBlog.Entities.Concrete;
 
 namespace Blog.Services.Abstract
 {

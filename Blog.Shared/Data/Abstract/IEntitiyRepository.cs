@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using ProgrammersBlog.Shared.Entities.Abstract;
+using Blog.Shared.Entities.Abstract;
 
-namespace ProgrammersBlog.Shared.Data.Abstract
+namespace Blog.Shared.Data.Abstract
 {
     public interface IEntitiyRepository<T> where T : class, IEntity, new()
     {

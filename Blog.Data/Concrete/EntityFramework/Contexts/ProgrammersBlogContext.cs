@@ -1,7 +1,7 @@
 ﻿using System;
+using Blog.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using ProgrammersBlog.Data.Concrete.EntityFramework.Mappings;
-using ProgrammersBlog.Entities.Concrete;
 
 namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
 {

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using ProgrammersBlog.Shared.Entities.Abstract;
+﻿using System.Collections.Generic;
+using Blog.Shared.Entities.Abstract;
 
-namespace ProgrammersBlog.Entities.Concrete
+namespace Blog.Entities.Concrete
 {
     public class Role : EntityBase, IEntity
     {

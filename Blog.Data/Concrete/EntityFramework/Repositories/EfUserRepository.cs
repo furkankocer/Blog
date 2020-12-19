@@ -1,8 +1,8 @@
 ﻿using System;
+using Blog.Entities.Concrete;
+using Blog.Shared.Data.Concrete.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using ProgrammersBlog.Data.Abstract;
-using ProgrammersBlog.Entities.Concrete;
-using ProgrammersBlog.Shared.Data.Concrete.EntityFramework;
 
 namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
 {

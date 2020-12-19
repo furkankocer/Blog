@@ -1,6 +1,6 @@
 ﻿using System;
-using ProgrammersBlog.Entities.Concrete;
-using ProgrammersBlog.Shared.Data.Abstract;
+using Blog.Entities.Concrete;
+using Blog.Shared.Data.Abstract;
 
 namespace ProgrammersBlog.Data.Abstract
 {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using ProgrammersBlog.Shared.Entities.Abstract;
+using Blog.Shared.Entities.Abstract;
 
-namespace ProgrammersBlog.Entities.Concrete
+namespace Blog.Entities.Concrete
 {
     public class Article : EntityBase, IEntity
     {
@@ -12,7 +12,7 @@ namespace ProgrammersBlog.Entities.Concrete
         public DateTime Date { get; set; }
         public int ViewsCount { get; set; }
         public int CommentCount { get; set; }
-        public string SeoAuthor { get; set; } // Metatag için
+        public string SeoAuthor { get; set; }
         public string SeoDescription { get; set; }
         public string SeoTags { get; set; }
         public int CategoryId { get; set; }

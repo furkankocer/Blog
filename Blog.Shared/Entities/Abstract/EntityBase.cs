@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ProgrammersBlog.Shared.Entities.Abstract
+namespace Blog.Shared.Entities.Abstract
 {
     public abstract class EntityBase
     {

@@ -1,7 +1,6 @@
-﻿using System;
-using ProgrammersBlog.Shared.Entities.Abstract;
+﻿using Blog.Shared.Entities.Abstract;
 
-namespace ProgrammersBlog.Entities.Concrete
+namespace Blog.Entities.Concrete
 {
     public class Comment : EntityBase, IEntity
     {

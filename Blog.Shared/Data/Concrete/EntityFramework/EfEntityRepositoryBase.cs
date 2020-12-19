@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Blog.Shared.Data.Abstract;
+using Blog.Shared.Entities.Abstract;
 using Microsoft.EntityFrameworkCore;
-using ProgrammersBlog.Shared.Data.Abstract;
-using ProgrammersBlog.Shared.Entities.Abstract;
 
-namespace ProgrammersBlog.Shared.Data.Concrete.EntityFramework
+namespace Blog.Shared.Data.Concrete.EntityFramework
 {
     public class EfEntityRepositoryBase<TEntity> : IEntitiyRepository<TEntity>
         where TEntity : class, IEntity, new()
