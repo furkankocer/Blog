@@ -85,9 +85,28 @@ namespace Blog.Services.Concrete
             return new DataResult<ArticleListDto>(ResultStatus.Error, "Makaleler bulunamadı", null);
         }
 
-        public Task<IDataResult<ArticleListDto>> GetAllByCategory(int categoryId)
+        public async Task<IDataResult<ArticleListDto>> GetAllByCategory(int categoryId)
         {
-            throw new System.NotImplementedException();
+            var result = await _unitOfWork.Categories.AnyAsync(x => x.Id == categoryId);
+            if (result)
+            {
+                var articles =
+                    await _unitOfWork.Articles.GetAllAsync(
+                        x => x.CategoryId == categoryId && !x.IsDeleted && x.IsActive,
+                        x => x.User, x => x.Category);
+
+                if (articles.Any())
+                {
+                    return new DataResult<ArticleListDto>(ResultStatus.Success, new ArticleListDto
+                    {
+                        Articles = articles,
+                        ResultStatus = ResultStatus.Success
+                    });
+                }
+                return new DataResult<ArticleListDto>(ResultStatus.Error, "Makale bulunamadı", null);
+            }
+            
+            return new DataResult<ArticleListDto>(ResultStatus.Error, "Böyle bir kategori bulunamadı", null);
         }
 
         public Task<IResult> Add(ArticleAddDto articleAddDto, string createdByName)
