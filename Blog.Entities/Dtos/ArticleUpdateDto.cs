@@ -27,6 +27,8 @@ namespace Blog.Entities.Dtos
         public Category Category { get; set; } // Navigation Prop.
         [DisplayName("Aktif mi?")]
         public bool IsActive { get; set; }
+        [DisplayName("Silinsin mi?")]
+        public bool IsDeleted { get; set; }
 
         public class ArticleUpdateDtoDtoValidator : AbstractValidator<ArticleUpdateDto>
         {
@@ -41,6 +43,7 @@ namespace Blog.Entities.Dtos
                 RuleFor(x => x.SeoDescription).NotNull().MinimumLength(1).MaximumLength(150);
                 RuleFor(x => x.CategoryId).NotNull();
                 RuleFor(x => x.IsActive).NotNull();
+                RuleFor(x => x.IsDeleted).NotNull();
             }
         }
         
