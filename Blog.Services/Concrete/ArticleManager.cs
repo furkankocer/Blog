@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Schema;
+using AutoMapper;
 using Blog.Entities.Concrete;
 using Blog.Entities.Dtos;
 using Blog.Services.Abstract;
@@ -16,10 +17,12 @@ namespace Blog.Services.Concrete
     public class ArticleManager : IArticleService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public ArticleManager(IUnitOfWork unitOfWork)
+        public ArticleManager(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task<IDataResult<ArticleDto>> Get(int articleId)
@@ -109,24 +112,56 @@ namespace Blog.Services.Concrete
             return new DataResult<ArticleListDto>(ResultStatus.Error, "Böyle bir kategori bulunamadı", null);
         }
 
-        public Task<IResult> Add(ArticleAddDto articleAddDto, string createdByName)
+        public async Task<IResult> Add(ArticleAddDto articleAddDto, string createdByName)
         {
-            throw new System.NotImplementedException();
+            var article = _mapper.Map<Article>(articleAddDto);
+            article.CreatedByName = createdByName;
+            article.ModifiedByName = createdByName;
+            article.UserId = 1;
+
+            await _unitOfWork.Articles.AddAsync(article).ContinueWith(t=>_unitOfWork.SaveAsync());
+            return new Result(ResultStatus.Success,$"{articleAddDto.Title} Başlıklı Makale Başarıyla Eklenmiştir.");
         }
 
-        public Task<IResult> Update(ArticleUpdateDto articleUpdateDto, string modifiedByName)
+        public async Task<IResult> Update(ArticleUpdateDto articleUpdateDto, string modifiedByName)
         {
-            throw new System.NotImplementedException();
+            var article = _mapper.Map<Article>(articleUpdateDto);
+            article.ModifiedByName = modifiedByName;
+
+            await _unitOfWork.Articles.UpdateAsync(article).ContinueWith(x => _unitOfWork.SaveAsync());
+            
+            return new Result(ResultStatus.Success,$"{articleUpdateDto.Title} Başlıklı Makale Başarıyla Güncellenmiştir.");
         }
 
-        public Task<IResult> Delete(int articleId, string modifiedByName)
+        public async Task<IResult> Delete(int articleId, string modifiedByName)
         {
-            throw new System.NotImplementedException();
+            var result = await _unitOfWork.Articles.AnyAsync(x => x.Id == articleId);
+            if (result)
+            {
+                var article =await _unitOfWork.Articles.GetAsync(x => x.Id == articleId);
+                article.IsDeleted = true;
+                article.ModifiedByName = modifiedByName;
+                article.ModifiedDate = DateTime.Now;
+                await _unitOfWork.Articles.UpdateAsync(article).ContinueWith(x => _unitOfWork.SaveAsync());
+                return new Result(ResultStatus.Success,$"{article.Title} Başlıklı Makale Başarıyla Silinmiştir.");
+            }
+            
+            return new Result(ResultStatus.Error,$" Böyle bir Makale Bulunamadı.");
         }
 
-        public Task<IResult> HardDelete(int articleId)
+        public async Task<IResult> HardDelete(int articleId)
         {
-            throw new System.NotImplementedException();
+            var result = await _unitOfWork.Articles.AnyAsync(x => x.Id == articleId);
+            if (result)
+            {
+                var article =await _unitOfWork.Articles.GetAsync(x => x.Id == articleId);
+                article.IsDeleted = true;
+                article.ModifiedDate = DateTime.Now;
+                await _unitOfWork.Articles.DeleteAsync(article).ContinueWith(x => _unitOfWork.SaveAsync());
+                return new Result(ResultStatus.Success,$"{article.Title} Başlıklı Makale Başarıyla Veritabanından Silinmiştir.");
+            }
+            
+            return new Result(ResultStatus.Error,$" Böyle bir Makale Bulunamadı.");
         }
     }
 }
