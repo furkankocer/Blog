@@ -10,8 +10,8 @@ using ProgrammersBlog.Data.Concrete.EntityFramework.Contexts;
 namespace Blog.Data.Migrations
 {
     [DbContext(typeof(ProgrammersBlogContext))]
-    [Migration("20201212215125_initialCreate")]
-    partial class initialCreate
+    [Migration("20210225081742_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace Blog.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Article", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Article", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -113,12 +113,12 @@ namespace Blog.Data.Migrations
                             CommentCount = 1,
                             Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(3240),
-                            Date = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(1330),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(5715),
+                            Date = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(4589),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(4200),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(6287),
                             Note = "C# 9 YENİLİKLERİ",
                             SeoAuthor = "Furkan Koçer",
                             SeoDescription = "C# 9 YENİLİKLERİ",
@@ -135,12 +135,12 @@ namespace Blog.Data.Migrations
                             CommentCount = 1,
                             Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(8180),
-                            Date = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(8160),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(7807),
+                            Date = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(7806),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(8180),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(7809),
                             Note = "C++ 9 YENİLİKLERİ",
                             SeoAuthor = "Furkan Koçer",
                             SeoDescription = "C++ 9 YENİLİKLERİ",
@@ -157,12 +157,12 @@ namespace Blog.Data.Migrations
                             CommentCount = 1,
                             Content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(8230),
-                            Date = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(8230),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(7815),
+                            Date = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(7814),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 160, DateTimeKind.Local).AddTicks(8230),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 537, DateTimeKind.Local).AddTicks(7816),
                             Note = "JAVA  YENİLİKLERİ",
                             SeoAuthor = "Furkan Koçer",
                             SeoDescription = "JAVA 9 YENİLİKLERİ",
@@ -174,7 +174,7 @@ namespace Blog.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Category", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -225,12 +225,12 @@ namespace Blog.Data.Migrations
                         {
                             Id = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 167, DateTimeKind.Local).AddTicks(5680),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 540, DateTimeKind.Local).AddTicks(3845),
                             Description = "C# İLE İLGİLİ GÜNCEL BİLGİLER",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 167, DateTimeKind.Local).AddTicks(5720),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 540, DateTimeKind.Local).AddTicks(3856),
                             Name = "C#",
                             Note = "C# KATEGORİSİ"
                         },
@@ -238,12 +238,12 @@ namespace Blog.Data.Migrations
                         {
                             Id = 2,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 167, DateTimeKind.Local).AddTicks(5810),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 540, DateTimeKind.Local).AddTicks(3871),
                             Description = "C++ İLE İLGİLİ GÜNCEL BİLGİLER",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 167, DateTimeKind.Local).AddTicks(5810),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 540, DateTimeKind.Local).AddTicks(3872),
                             Name = "C++",
                             Note = "C++ KATEGORİSİ"
                         },
@@ -251,18 +251,18 @@ namespace Blog.Data.Migrations
                         {
                             Id = 3,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 167, DateTimeKind.Local).AddTicks(5820),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 540, DateTimeKind.Local).AddTicks(3875),
                             Description = "JAVA İLE İLGİLİ GÜNCEL BİLGİLER",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 167, DateTimeKind.Local).AddTicks(5820),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 540, DateTimeKind.Local).AddTicks(3876),
                             Name = "JAVA",
                             Note = "JAVA KATEGORİSİ"
                         });
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Comment", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -315,17 +315,17 @@ namespace Blog.Data.Migrations
                             Id = 1,
                             ArticleId = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 172, DateTimeKind.Local).AddTicks(6520),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 542, DateTimeKind.Local).AddTicks(1603),
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 172, DateTimeKind.Local).AddTicks(6520),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 542, DateTimeKind.Local).AddTicks(1614),
                             Note = "Firs Comment",
                             Text = "Hello"
                         });
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Role", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Role", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -377,18 +377,18 @@ namespace Blog.Data.Migrations
                         {
                             Id = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 177, DateTimeKind.Local).AddTicks(3280),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 543, DateTimeKind.Local).AddTicks(5728),
                             Description = "Admin Rolü, Tüm Haklara Sahiptir.",
                             IsActive = true,
                             IsDeleted = false,
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 177, DateTimeKind.Local).AddTicks(3290),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 543, DateTimeKind.Local).AddTicks(5737),
                             Name = "Admin",
                             Note = "Admin Rolüdür"
                         });
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.User", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -474,7 +474,7 @@ namespace Blog.Data.Migrations
                         {
                             Id = 1,
                             CreatedByName = "InitialCreate",
-                            CreatedDate = new DateTime(2020, 12, 13, 0, 51, 25, 188, DateTimeKind.Local).AddTicks(2170),
+                            CreatedDate = new DateTime(2021, 2, 25, 11, 17, 41, 548, DateTimeKind.Local).AddTicks(4589),
                             Description = "İlk Admin Kullanıcıs",
                             Email = "furkankocer@hotmail.com",
                             FirstName = "Furkan",
@@ -482,7 +482,7 @@ namespace Blog.Data.Migrations
                             IsDeleted = false,
                             LastName = "Koçer",
                             ModifiedByName = "InitialCreate",
-                            ModifiedDate = new DateTime(2020, 12, 13, 0, 51, 25, 188, DateTimeKind.Local).AddTicks(2180),
+                            ModifiedDate = new DateTime(2021, 2, 25, 11, 17, 41, 548, DateTimeKind.Local).AddTicks(4599),
                             Note = "Admin Kullanıcısı",
                             PasswordHash = new byte[] { 101, 49, 48, 97, 100, 99, 51, 57, 52, 57, 98, 97, 53, 57, 97, 98, 98, 101, 53, 54, 101, 48, 53, 55, 102, 50, 48, 102, 56, 56, 51, 101 },
                             Picture = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSX4wVGjMQ37PaO4PdUVEAliSLi8-c2gJ1zvQ&usqp=CAU",
@@ -491,15 +491,15 @@ namespace Blog.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Article", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Article", b =>
                 {
-                    b.HasOne("ProgrammersBlog.Entities.Concrete.Category", "Category")
+                    b.HasOne("Blog.Entities.Concrete.Category", "Category")
                         .WithMany("Articles")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProgrammersBlog.Entities.Concrete.User", "User")
+                    b.HasOne("Blog.Entities.Concrete.User", "User")
                         .WithMany("Articles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -510,9 +510,9 @@ namespace Blog.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Comment", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Comment", b =>
                 {
-                    b.HasOne("ProgrammersBlog.Entities.Concrete.Article", "Article")
+                    b.HasOne("Blog.Entities.Concrete.Article", "Article")
                         .WithMany("Comments")
                         .HasForeignKey("ArticleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -521,9 +521,9 @@ namespace Blog.Data.Migrations
                     b.Navigation("Article");
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.User", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.User", b =>
                 {
-                    b.HasOne("ProgrammersBlog.Entities.Concrete.Role", "Role")
+                    b.HasOne("Blog.Entities.Concrete.Role", "Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -532,22 +532,22 @@ namespace Blog.Data.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Article", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Article", b =>
                 {
                     b.Navigation("Comments");
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Category", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Category", b =>
                 {
                     b.Navigation("Articles");
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.Role", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.Role", b =>
                 {
                     b.Navigation("Users");
                 });
 
-            modelBuilder.Entity("ProgrammersBlog.Entities.Concrete.User", b =>
+            modelBuilder.Entity("Blog.Entities.Concrete.User", b =>
                 {
                     b.Navigation("Articles");
                 });

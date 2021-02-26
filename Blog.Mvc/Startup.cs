@@ -8,8 +8,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using Blog.Data.Abstract;
+using Blog.Data.Concrete;
+using Blog.Services.Abstract;
+using Blog.Services.Concrete;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
+using ProgrammersBlog.Data.Concrete.EntityFramework.Contexts;
 
 namespace Blog.Mvc
 {
@@ -31,7 +37,11 @@ namespace Blog.Mvc
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
 
-            services.AddAutoMapper(typeof(Startup)); // AutoMapper Eklemesi yapýldý.
+            services.AddAutoMapper(typeof(Startup));
+            services.AddDbContext<ProgrammersBlogContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<IArticleService, ArticleManager>();
 
         }
 

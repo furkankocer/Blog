@@ -1,8 +1,10 @@
 using System.Threading.Tasks;
+using Blog.Data.Abstract;
+using Blog.Data.Concrete.EntityFramework.Repositories;
 using ProgrammersBlog.Data.Abstract;
 using ProgrammersBlog.Data.Concrete.EntityFramework.Contexts;
 
-namespace ProgrammersBlog.Data.Concrete
+namespace Blog.Data.Concrete
 {
     public class UnitOfWork : IUnitOfWork
     {

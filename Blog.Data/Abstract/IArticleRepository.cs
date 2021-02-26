@@ -1,8 +1,7 @@
-﻿using System;
-using Blog.Entities.Concrete;
+﻿using Blog.Entities.Concrete;
 using Blog.Shared.Data.Abstract;
 
-namespace ProgrammersBlog.Data.Abstract
+namespace Blog.Data.Abstract
 {
     public interface IArticleRepository : IEntitiyRepository <Article>
     {
